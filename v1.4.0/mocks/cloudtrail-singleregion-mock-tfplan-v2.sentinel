@@ -1,0 +1,216 @@
+terraform_version = "1.6.3"
+
+planned_values = {
+	"outputs": {},
+	"resources": {
+		"aws_cloudtrail.example": {
+			"address":        "aws_cloudtrail.example",
+			"depends_on":     [],
+			"deposed_key":    "",
+			"index":          null,
+			"mode":           "managed",
+			"module_address": "",
+			"name":           "example",
+			"provider_name":  "registry.terraform.io/hashicorp/aws",
+			"tainted":        false,
+			"type":           "aws_cloudtrail",
+			"values": {
+				"advanced_event_selector":       [],
+				"cloud_watch_logs_group_arn":    null,
+				"cloud_watch_logs_role_arn":     null,
+				"enable_log_file_validation":    false,
+				"enable_logging":                true,
+				"event_selector":                [],
+				"include_global_service_events": false,
+				"insight_selector":              [],
+				"is_multi_region_trail":         false,
+				"is_organization_trail":         false,
+				"kms_key_id":                    null,
+				"name":                          "example",
+				"s3_bucket_name":                "stm-cloudtrail-sentinel",
+				"s3_key_prefix":                 null,
+				"sns_topic_name":                null,
+				"tags":                          null,
+			},
+		},
+	},
+}
+
+variables = {}
+
+resource_changes = {
+	"aws_cloudtrail.example": {
+		"address": "aws_cloudtrail.example",
+		"change": {
+			"actions": [
+				"create",
+			],
+			"after": {
+				"advanced_event_selector":       [],
+				"cloud_watch_logs_group_arn":    null,
+				"cloud_watch_logs_role_arn":     null,
+				"enable_log_file_validation":    false,
+				"enable_logging":                true,
+				"event_selector":                [],
+				"include_global_service_events": false,
+				"insight_selector":              [],
+				"is_multi_region_trail":         false,
+				"is_organization_trail":         false,
+				"kms_key_id":                    null,
+				"name":                          "example",
+				"s3_bucket_name":                "stm-cloudtrail-sentinel",
+				"s3_key_prefix":                 null,
+				"sns_topic_name":                null,
+				"tags":                          null,
+			},
+			"after_unknown": {
+				"advanced_event_selector": [],
+				"arn":              true,
+				"event_selector":   [],
+				"home_region":      true,
+				"id":               true,
+				"insight_selector": [],
+				"tags_all":         true,
+			},
+			"before": null,
+		},
+		"deposed":        "",
+		"index":          null,
+		"mode":           "managed",
+		"module_address": "",
+		"name":           "example",
+		"provider_name":  "registry.terraform.io/hashicorp/aws",
+		"type":           "aws_cloudtrail",
+	},
+}
+
+output_changes = {}
+
+raw = {
+	"configuration": {
+		"provider_config": {
+			"aws": {
+				"expressions": {
+					"region": {
+						"constant_value": "us-west-2",
+					},
+				},
+				"full_name":          "registry.terraform.io/hashicorp/aws",
+				"name":               "aws",
+				"version_constraint": "~> 5.0",
+			},
+		},
+		"root_module": {
+			"resources": [
+				{
+					"address": "aws_cloudtrail.example",
+					"expressions": {
+						"include_global_service_events": {
+							"constant_value": false,
+						},
+						"name": {
+							"constant_value": "example",
+						},
+						"s3_bucket_name": {
+							"constant_value": "stm-cloudtrail-sentinel",
+						},
+					},
+					"mode":                "managed",
+					"name":                "example",
+					"provider_config_key": "aws",
+					"schema_version":      0,
+					"type":                "aws_cloudtrail",
+				},
+			],
+		},
+	},
+	"format_version": "1.2",
+	"planned_values": {
+		"root_module": {
+			"resources": [
+				{
+					"address":        "aws_cloudtrail.example",
+					"mode":           "managed",
+					"name":           "example",
+					"provider_name":  "registry.terraform.io/hashicorp/aws",
+					"schema_version": 0,
+					"sensitive_values": {
+						"advanced_event_selector": [],
+						"event_selector":          [],
+						"insight_selector":        [],
+						"tags_all":                {},
+					},
+					"type": "aws_cloudtrail",
+					"values": {
+						"advanced_event_selector":       [],
+						"cloud_watch_logs_group_arn":    null,
+						"cloud_watch_logs_role_arn":     null,
+						"enable_log_file_validation":    false,
+						"enable_logging":                true,
+						"event_selector":                [],
+						"include_global_service_events": false,
+						"insight_selector":              [],
+						"is_multi_region_trail":         false,
+						"is_organization_trail":         false,
+						"kms_key_id":                    null,
+						"name":                          "example",
+						"s3_bucket_name":                "stm-cloudtrail-sentinel",
+						"s3_key_prefix":                 null,
+						"sns_topic_name":                null,
+						"tags":                          null,
+					},
+				},
+			],
+		},
+	},
+	"resource_changes": [
+		{
+			"address": "aws_cloudtrail.example",
+			"change": {
+				"actions": [
+					"create",
+				],
+				"after": {
+					"advanced_event_selector":       [],
+					"cloud_watch_logs_group_arn":    null,
+					"cloud_watch_logs_role_arn":     null,
+					"enable_log_file_validation":    false,
+					"enable_logging":                true,
+					"event_selector":                [],
+					"include_global_service_events": false,
+					"insight_selector":              [],
+					"is_multi_region_trail":         false,
+					"is_organization_trail":         false,
+					"kms_key_id":                    null,
+					"name":                          "example",
+					"s3_bucket_name":                "stm-cloudtrail-sentinel",
+					"s3_key_prefix":                 null,
+					"sns_topic_name":                null,
+					"tags":                          null,
+				},
+				"after_sensitive": {
+					"advanced_event_selector": [],
+					"event_selector":          [],
+					"insight_selector":        [],
+					"tags_all":                {},
+				},
+				"after_unknown": {
+					"advanced_event_selector": [],
+					"arn":              true,
+					"event_selector":   [],
+					"home_region":      true,
+					"id":               true,
+					"insight_selector": [],
+					"tags_all":         true,
+				},
+				"before":           null,
+				"before_sensitive": false,
+			},
+			"mode":          "managed",
+			"name":          "example",
+			"provider_name": "registry.terraform.io/hashicorp/aws",
+			"type":          "aws_cloudtrail",
+		},
+	],
+	"terraform_version": "1.6.3",
+}

@@ -1,0 +1,25 @@
+#CloudTrail should be enabled and configured with at least one multi-Region trail that includes read and write management events
+# TODO: Address the ideal way to determine when this policy is appropriate to run
+# TODO: check how the reading and writing of management events works and write configuration to include it:
+#https://registry.terraform.io/providers/hashicorp/aws/latest/docs/resources/cloudtrail.html#include_management_events
+import "tfplan/v2" as tfplan
+
+param actions default [
+	["no-op"],
+	["create"],
+	["update"],
+]
+
+aws_cloudtrails = filter tfplan.resource_changes as _, rc {
+	rc.type is "aws_cloudtrail" and
+	rc.mode is "managed" and
+	rc.change.actions in actions
+}
+
+multiregion_trails_exist = any aws_cloudtrails as ct {
+	aws_cloudtrails[ct].change.after.is_multi_region_trail is true 
+}
+
+main = rule {
+	multiregion_trails_exist
+}
